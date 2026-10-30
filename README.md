@@ -110,7 +110,7 @@ Non-secret settings (`GLOSSARY`, `SUMMARY_MODEL`, etc.) can go in an `[env]` blo
 2. SSH in and run:
 
    ```bash
-   git clone https://github.com/LetsGetTechnical/GIS-Notetaker.git /tmp/gis && bash /tmp/gis/deploy/gcp-setup.sh
+   git clone https://github.com/bethanyann/GIS-Notetaker.git /tmp/gis && bash /tmp/gis/deploy/gcp-setup.sh
    sudo nano /opt/gis-notetaker/.env
    cd /opt/gis-notetaker && sudo -u gisbot node dist/register-commands.js
    sudo systemctl enable --now gis-notetaker

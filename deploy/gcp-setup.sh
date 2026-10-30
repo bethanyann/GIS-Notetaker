@@ -3,7 +3,7 @@
 # Run on the VM:  curl -fsSL <raw-url-of-this-file> | bash   or copy it over and  bash gcp-setup.sh
 set -euo pipefail
 
-REPO_URL="${REPO_URL:-https://github.com/LetsGetTechnical/GIS-Notetaker.git}"
+REPO_URL="${REPO_URL:-https://github.com/bethanyann/GIS-Notetaker.git}"
 APP_DIR=/opt/gis-notetaker
 
 echo "==> Adding 1 GB of swap (e2-micro only has 1 GB RAM; npm builds need headroom)"
