@@ -1,0 +1,20 @@
+[Unit]
+Description=GIS-Notetaker Discord meeting notes bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=gisbot
+WorkingDirectory=/opt/gis-notetaker
+ExecStart=/usr/bin/node dist/index.js
+Restart=always
+RestartSec=5
+# Give an in-progress meeting time to be written up on restart.
+TimeoutStopSec=300
+KillSignal=SIGTERM
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

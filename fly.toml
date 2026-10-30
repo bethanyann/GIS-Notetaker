@@ -1,0 +1,14 @@
+# Fly.io config. Deploy with:  fly launch --no-deploy --copy-config  then  fly deploy
+# The bot only makes outbound connections, so there are no [http_service] or ports.
+app = "gis-notetaker"
+primary_region = "ord" # Chicago
+
+# Give an in-progress meeting time to be written up before a redeploy kills the bot.
+kill_signal = "SIGTERM"
+kill_timeout = "300s"
+
+[build]
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"
